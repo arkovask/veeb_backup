@@ -12,5 +12,6 @@
   <title><?php echo SITENAME; ?></title>
 </head>
 <body>
+  <?php require_once APPROOT.'/views/inc/navbar.php';?>
   <div class="container">
 
