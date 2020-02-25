@@ -1,3 +1,4 @@
 <?php
 require_once 'config/config.php';
-echo 'Konfigureerimine bootstrapis';
+
+require_once 'libs/Core.php';
