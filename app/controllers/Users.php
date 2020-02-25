@@ -1,9 +1,9 @@
 <?php
 
 
-class Users
+class Users extends Controller
 {
-  public function login($id, $data){
-    echo $id.' '.$data;
+  public function login(){
+    $this->view(viewFile: 'users/login');
   }
 }
