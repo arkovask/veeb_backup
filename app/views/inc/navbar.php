@@ -13,6 +13,9 @@
       <ul class="navbar-nav ml-auto">
         <?php if(isset($_SESSION['user_id'])) :?>
           <li class="nav-item">
+            <span class="navbar-text text-light"><?php echo $_SESSION['user_name'];?></span>
+          </li>
+          <li class="nav-item">
             <a href="<?php echo URLROOT;?>/users/logout" class="nav-link">Logout</a>
           </li>
         <?php else :?>
