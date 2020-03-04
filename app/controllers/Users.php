@@ -92,7 +92,8 @@ class Users extends Controller
         $data['pass'] = password_hash($data['pass'], PASSWORD_DEFAULT);
         // register user
         if($this->userModel->register($data)){
-          header('Location: '.URLROOT.'/users/login');
+          flashSet('register_success', 'You are registered and can log in', 'alert alert-info');
+          redirect('users/login');
         } else {
            die('Sometrhing went wrong');
         }
@@ -108,12 +109,12 @@ class Users extends Controller
     $_SESSION['user_id'] = $user->id;
     $_SESSION['user_name'] = $user->name;
     $_SESSION['user_email'] = $user->email;
-    header('Location: '.URLROOT);
+    redirect();
   }
   // logout user
   public function logout(){
     session_unset();
     session_destroy();
-    header('Location: '.URLROOT);
+    redirect();
   }
 }
