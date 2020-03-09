@@ -3,7 +3,7 @@ session_start();
 error_reporting(~E_NOTICE & ~E_WARNING);
 // config
 require_once 'config/config.php';
-// helpers files
+// helper files
 require_once 'helpers/url_helper.php';
 require_once 'helpers/session_helper.php';
 // system
